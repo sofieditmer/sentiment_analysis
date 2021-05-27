@@ -6,7 +6,7 @@ This assignment was assigned by the course instructor as “Assignment 3 – Sen
 
 ### Content and Repository Structure <br>
 If the user wishes to engage with the code and reproduce the obtained results, this section includes the necessary instructions to do so. It is important to remark that all the code that has been produced has only been tested in Linux and MacOS. Hence, for the sake of convenience, I recommend using a similar environment to avoid potential problems. 
-The repository follows the overall structure presented below. The python sentiment.py script is located in the src folder. The data on which the sentiment analysis has been performed is provided in the data folder, and the outputs produced when running the script can be found within the output folder. The README file contains a detailed run-through of how to engage with the code and reproduce the contents.
+The repository follows the overall structure presented below. The python ```sentiment.py``` script is located in the ```src``` folder. The data on which the sentiment analysis has been performed is provided in the data folder, and the outputs produced when running the script can be found within the output folder. The README file contains a detailed run-through of how to engage with the code and reproduce the contents.
 
 | Folder | Description|
 |--------|:-----------|
@@ -25,20 +25,20 @@ To reproduce the results of this assignment, the user will have to create their 
 $ git clone https://github.com/sofieditmer/sentiment_analysis.git
 ```
 
-Once the user has cloned the repository, a virtual environment must be set up in which the relevant dependencies can be installed. To set up the virtual environment and install the relevant dependencies, a bash-script is provided, which creates a virtual environment and installs the dependencies listed in the requirements.txt file when executed. To run the bash-script that sets up the virtual environment and installs the relevant dependencies, the user must first navigate to the sentiment_analysis repository:
+Once the user has cloned the repository, a virtual environment must be set up in which the relevant dependencies can be installed. To set up the virtual environment and install the relevant dependencies, a bash-script is provided, which creates a virtual environment and installs the dependencies listed in the ```requirements.txt``` file when executed. To run the bash-script that sets up the virtual environment and installs the relevant dependencies, the user must first navigate to the ```sentiment_analysis``` repository:
 
 ```
 $ cd sentiment_analysis
 $ bash create_sentiment_venv.sh 
 ```
 
-Once the virtual environment has been set up and the relevant dependencies listed in requirements.txt have been installed within it, the user is now able to run the sentiment.py script provided in the src folder directly from the command line. In order to run the script, the user must first activate the virtual environment in which the script can be run. Activating the virtual environment is done as follows:
+Once the virtual environment has been set up and the relevant dependencies listed in ```requirements.txt``` have been installed within it, the user is now able to run the ```sentiment.py``` script provided in the ```src``` folder directly from the command line. In order to run the script, the user must first activate the virtual environment in which the script can be run. Activating the virtual environment is done as follows:
 
 ```
 $ source sentiment_venv/bin/activate
 ```
 
-Once the virtual environment has been activated, the user is now able to run the sentiment.py script within it:
+Once the virtual environment has been activated, the user is now able to run the ```sentiment.py``` script within it:
 
 ```
 (sentiment_venv) $ cd src
