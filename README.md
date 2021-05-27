@@ -65,17 +65,17 @@ When running the ```sentiment.py```script, the following files will be saved in 
 ### Discussion of Results <br>
 With both a 1-week and 1-month rolling average the sentiment scores of the news headlines generally lie above 0 indicating a very slight positive sentiment. Hence, it seems that most news headlines from this particular news station display a relatively neutral sentiment. With a 1-week rolling average the sentiment scores generally range between 0 and 0.05 (see figure 1). However, around 2006-2007 there is a significant decrease in sentiment scores. When assessing the sentiment scores with a 1-month rolling average, less variation is present (see figure 2). What is interesting is the slight increase in sentiment scores between 2012 and 2016, as well as the slight decrease in sentiment scores starting around 2005 and lasting to around 2010. One could suspect that this slight decrease in average sentiment might be due to the financial crisis that took place around this time.
 
-<p float="center">
+<p float="left">
   <img src="https://github.com/sofieditmer/sentiment_analysis/blob/main/output/smoothed_sentiment_7d_rolling_average.png" width="400" height = "400" />
   <img src="https://github.com/sofieditmer/sentiment_analysis/blob/main/output/smoothed_sentiment_30d_rolling_average.png" width="400" height = "400" /> 
 </p> 
-*Figure 1: Sentiment scores with 1-week and 1-month rolling averages.* <br> <br>
+Figure 1: Sentiment scores with 1-week and 1-month rolling averages. <br> <br>
 
 To inform the plots displaying sentiment scores over time, I also produced a plot displaying the number of headlines for each sentiment category (see figure 2). When considering the three plots in relation to one another, it becomes clear that there is a general tendency of the news headlines being relatively neutral in sentiment. When only assessing the number of positive and negative news headlines in relation to one another, there are slightly more news headlines with a positive sentiment, which corresponds well to the tendency of the plots displaying sentiment scores over time. 
 However, most news headlines seem to have a sentiment score of 0. This is most likely due to the vocabulary size of the dictionary used to estimate the sentiment scores of the news headlines. One could suspect that the headlines with an estimated sentiment score of 0 is most likely due to the fact that they contain words that are not present in the sentiment dictionary. Hence, when a word is not within the dictionary it is automatically assigned a value of 0 which explains why the vast majority of news headlines are categorized as “neutral”. This aspect also demonstrates a more general problem with the dictionary-based approach to sentiment analysis; that dictionary-based sentiment analyses are only able to handle words that are present in the dictionary.
 
 <img src="https://github.com/sofieditmer/sentiment_analysis/blob/main/output/sentiment_barplot.png" width="500">
-*Figure 2: Number of news headlines in each sentiment category.* <br> <br>
+Figure 2: Number of news headlines in each sentiment category. <br> <br>
 
 When examining the documentation of the spaCyTextBlob  and the dictionary used to estimate the sentiment scores, it becomes clear that the vast majority of annotated words are adjectives. While the primary use of adjectives for sentiment analysis makes perfect sense, given that adjectives are most commonly used to express sentiment, it also means that other word classes that carry valence and an inherent sentiment are not evaluated, which demonstrates another problem with the dictionary-based approach to sentiment analysis. 
 To overcome the limitations of employing a dictionary-based approach to sentiment analysis, one could instead have employed a machine learning approach or even a deep learning approach, in which a model learns the relationship between linguistic features in the text and their sentiment, and can then be used to classify new, unseen texts. This kind of method could potentially improve the results obtained by a dictionary-based approach. 
